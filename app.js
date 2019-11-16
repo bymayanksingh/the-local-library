@@ -7,8 +7,8 @@ var logger = require('morgan')
 var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
 var mongoose = require('mongoose')
-var mongoDB = 'mongodb+srv://codemonk08:<ZAkxCppU3BJW4PA>@cluster0-rppgh.mongodb.net/test?retryWrites=true&w=majority'
-mongoose.connect(mongoDB, { useNewUrlParser: true })
+var mongoDB = 'mongodb://localhost:27017/library'
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
 var db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
