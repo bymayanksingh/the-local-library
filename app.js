@@ -6,6 +6,8 @@ var logger = require('morgan')
 
 var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
+var catalogRouter = require('./routes/catalog')
+
 var mongoose = require('mongoose')
 var mongoDB = 'mongodb://localhost:27017/library'
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -26,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
+app.use('/catalog', catalogRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

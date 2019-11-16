@@ -44,3 +44,5 @@ router.get('/bookinstance/:id/update', bookinstanceController.bookinstance_updat
 router.post('/bookinstance/:id/update', bookinstanceController.auhtor_update_post)
 router.get('/bookinstance/:id', bookinstanceController.bookinstance_detail)
 router.get('/bookinstances', bookinstanceController.bookinstance_list)
+
+module.exports = router;

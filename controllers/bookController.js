@@ -1,5 +1,6 @@
 var Book = require('../models/book')
 
+//Index page
 exports.index = function (req, res) {
   res.send('NOT IMPLEMENTED: SITE HOME PAGE')
 }
